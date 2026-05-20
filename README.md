@@ -28,4 +28,4 @@ An interactive review system built with React that allows users to rate their ex
 * **Git & GitHub Pages:** Deployment host systems managing deployment processing.
   
 ## DEMO
-Click [Here]( ) to test the create App.
+Click [Here](https://pattyruk.github.io/rating/) to test the create App.
