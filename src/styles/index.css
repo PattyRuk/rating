@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import './reset.css';
+
+:root {
+  --bg-primary: #212f3d;
+  --text-primary: #0f0e0e;
+  --text-light: white;
+  --selected: #ffc107;
+  --secondary: #5e5d5d;
+  
+  --primary: #007bff;
+  --primary-hover: #0056b3;
+
+  --overlay: rgba(0, 0, 0, 0.5);
+  --font-sans: 'Arial', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: center;
+  padding: 100px 50px;
+}
+
+.dialog-content {
+  text-align: center;
+  background: var(--text-light);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+h1 {font-size: 4rem;}
+
+h2 {font-size: 2.6rem;}
+
+/* Button*/
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-light);
+}
+
+.btn-submit {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--primary);
+}
+
+.btn-submit:hover, .btn-close:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-close {
+  padding: 8px 16px;
+  margin-top: 10px;
+  background-color: var(--primary);
+}
+
+/* Stars */
+.rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.star-icon {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.star-icon:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Dialog Modal */
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

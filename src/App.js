@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import StarRating from './components/StarRating';
+import Dialog from './components/Dialog';
 
 function App() {
+  const [isDialog, setIsDialog] = useState(false);
+
+  const openDialog = () => setIsDialog(true);
+  const closeDialog = () => setIsDialog(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>Rate My Project</h1>
+      <StarRating />
+      <button className="btn-submit" onClick={openDialog}>
+        Submit Review
+      </button>
+      <Dialog isOpen={isDialog} onClose={closeDialog} />
     </div>
   );
 }
